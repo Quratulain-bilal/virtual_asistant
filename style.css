@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1; /* Background me rakhne ke liye */
+    z-index: -1; /* Keep it in the background */
 }
 
 /* Main Body Styling */
@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Content Styling */
@@ -26,12 +27,14 @@ body {
     text-align: center;
     z-index: 1;
     color: white;
+    width: 90%;
 }
 
 /* Logo Styling */
 #logo {
-    width: 70vw;
+    width: 70vw; /* Adjust logo size for most screens */
     max-width: 650px; /* Limit maximum width for larger screens */
+    margin-bottom: 20px; /* Space between logo and text */
 }
 
 /* Text Styling */
@@ -39,24 +42,20 @@ h1 {
     color: aliceblue;
     font-family: "Protest Guerrilla", sans-serif;
     font-size: 2rem; /* Responsive font size */
-    
+    margin: 10px 0; /* Add some spacing */
 }
 
-#name {
+#name, #va {
     color: rgb(43, 206, 212);
     font-size: 2.5rem; /* Responsive font size */
-}
-
-#va {
-    color: rgb(43, 206, 212);
-    font-size: 2.5rem; /* Responsive font size */
+    margin: 10px 0; /* Add some spacing */
 }
 
 /* Voice Icon */
 #voice {
     width: 100px;
-    display: none;
-    margin-left: 25%;
+    display: none; /* Hidden by default */
+    margin: 20px auto; /* Center the icon */
 }
 
 /* Button Styling */
@@ -76,8 +75,7 @@ h1 {
     border: none;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 20px 0;
-    margin-left: 25%; /* Add margin for spacing */
+    margin: 20px auto; /* Center the button */
 }
 
 #btn:hover {
@@ -89,7 +87,12 @@ h1 {
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     #logo {
-        width: 70vw; /* Adjust logo size for smaller screens */
+        width: 150vw; /* Adjust logo size for smaller screens */
+        max-width: none; /* Remove max-width restriction */
+        margin-left: 0; /* Reset margin */
+        transform: translateX(-50%); /* Center the logo */
+        left: 50%; /* Center the logo */
+        position: relative; /* Required for transform */
     }
 
     h1 {
@@ -101,7 +104,7 @@ h1 {
     }
 
     #btn {
-        width: 90%; /* Adjust button width for smaller screens */
+        width: 70%; /* Adjust button width for smaller screens */
         font-size: 1.2rem; /* Adjust font size for smaller screens */
         padding: 12px; /* Adjust padding for smaller screens */
     }
@@ -109,7 +112,12 @@ h1 {
 
 @media (max-width: 480px) {
     #logo {
-        width: 80vw; /* Adjust logo size for very small screens */
+        width: 170vw; /* Adjust logo size for very small screens */
+        max-width: none; /* Remove max-width restriction */
+        margin-left: 0; /* Reset margin */
+        transform: translateX(-50%); /* Center the logo */
+        left: 70%; /* Center the logo */
+        position: relative; /* Required for transform */
     }
 
     h1 {
@@ -121,7 +129,7 @@ h1 {
     }
 
     #btn {
-        width: 95%; /* Adjust button width for very small screens */
+        width: 70%; /* Adjust button width for very small screens */
         font-size: 1rem; /* Adjust font size for very small screens */
         padding: 10px; /* Adjust padding for very small screens */
     }
