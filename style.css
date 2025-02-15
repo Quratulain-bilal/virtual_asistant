@@ -1,0 +1,128 @@
+/* Fullscreen Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Background me rakhne ke liye */
+}
+
+/* Main Body Styling */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+/* Logo Styling */
+#logo {
+    width: 70vw;
+    max-width: 650px; /* Limit maximum width for larger screens */
+}
+
+/* Text Styling */
+h1 {
+    color: aliceblue;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2rem; /* Responsive font size */
+    
+}
+
+#name {
+    color: rgb(43, 206, 212);
+    font-size: 2.5rem; /* Responsive font size */
+}
+
+#va {
+    color: rgb(43, 206, 212);
+    font-size: 2.5rem; /* Responsive font size */
+}
+
+/* Voice Icon */
+#voice {
+    width: 100px;
+    display: none;
+    margin-left: 25%;
+}
+
+/* Button Styling */
+#btn {
+    width: 80%; /* Increased button length */
+    max-width: 400px; /* Limit maximum width for larger screens */
+    background: rgb(43, 206, 212);
+    padding: 15px; /* Increased padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem; /* Responsive font size */
+    border-radius: 10px; /* Increased border radius */
+    color: white;
+    box-shadow: 0 0 20px rgba(21, 145, 207, 0.8), 0 0 20px rgba(201, 41, 116, 0.8);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px 0;
+    margin-left: 25%; /* Add margin for spacing */
+}
+
+#btn:hover {
+    box-shadow: 0 0 30px rgba(21, 145, 207, 1), 0 0 30px rgba(201, 41, 116, 1);
+    letter-spacing: 2px;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #logo {
+        width: 70vw; /* Adjust logo size for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #name, #va {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    #btn {
+        width: 90%; /* Adjust button width for smaller screens */
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 80vw; /* Adjust logo size for very small screens */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Adjust font size for very small screens */
+    }
+
+    #name, #va {
+        font-size: 1.5rem; /* Adjust font size for very small screens */
+    }
+
+    #btn {
+        width: 95%; /* Adjust button width for very small screens */
+        font-size: 1rem; /* Adjust font size for very small screens */
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
