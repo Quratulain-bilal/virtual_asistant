@@ -93,7 +93,7 @@ function takeCommand(message) {
     speak("I am your virtual assistant my name is  Annie, created by Quratulain Shah.");
   } else if (message.includes("say thanks to my teacher")) {
     speak(
-      "Thanks a lot to quratulain  Sir Zia, Sir Ameen Alam, Sir Ali Jawad."
+      "Thanks a lot to quratulain s teachers   Sir Zia, Sir Ameen Alam, Sir Ali Jawad."
     );
   } else if (
     message.includes("tell me the name of my teachers") ||
